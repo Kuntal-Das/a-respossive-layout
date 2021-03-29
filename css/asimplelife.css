@@ -1,0 +1,114 @@
+/*  Fonts
+    -----
+    font-family: 'Lora', serif;
+    font-family: 'Ubuntu', sans-serif;
+ */
+/* html {
+  padding: 0;
+} */
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --nav-breakpoint: 750px;
+}
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+header {
+  background-color: #f8f8f8;
+  padding: 2em 0;
+}
+nav {
+  margin: 0;
+}
+.title {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #143774;
+}
+.subtitle {
+  font-size: 0.75rem;
+  color: #1792d2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ============
+   Layout 
+=============*/
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  /*   border: 1px solid pink; */
+}
+
+/*============= 
+  Navigation
+=============*/
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 775px) {
+  .nav-container {
+    flex-direction: column;
+  }
+}
+
+.nav-list {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+@media (max-width: 775px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.nav-item {
+  margin-left: 1em;
+}
+@media (max-width: 775px) {
+  .nav-item {
+    margin-top: 1.75em;
+  }
+}
+
+.nav-link {
+  padding: 0.25em 0;
+  cursor: pointer;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #1792d2;
+}
+
+.current-page > .nav-link {
+  border-bottom: 1px solid;
+}
+.current-page > .nav-link:hover {
+  color: #707070;
+}
+
+/* =======================
+    Layout
+======================= */

@@ -9,104 +9,187 @@
 *,
 *:after,
 *:before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
 }
+
 :root {
-  --nav-breakpoint: 750px;
+    --nav-breakpoint: 750px;
+    --clr-white     : #f8f8f8;
+    --clr-gray      : #707070;
+    --clr-blue      : #1792d2;
+    --clr-dark-blue : #143774;
 }
+
 body {
-  min-height: 100vh;
-  font-family: "Ubuntu", sans-serif;
+    min-height: 100vh;
 }
-header {
-  background-color: #f8f8f8;
-  padding: 2em 0;
-}
+
 nav {
-  margin: 0;
+    margin: 0;
 }
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* ============
+Typography 
+=============*/
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-size  : 1.125rem;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color      : var(--clr-dark-blue);
+}
+
+strong {
+    font-weight: 700;
+}
+
 .title {
-  font-family: "Lora", serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #143774;
+    font-size: 2rem;
 }
+
 .subtitle {
-  font-size: 0.75rem;
-  color: #1792d2;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    font-size     : 0.75rem;
+    color         : var(--clr-blue);
+    font-weight   : 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.article-heading {
+    font-size: 1.5rem;
+}
+
+.article-readmore,
+.article-facts {
+    font-size: 0.875rem;
+}
+
+.article-readmore {
+    text-decoration: none;
+    text-transform : uppercase;
+    letter-spacing : 2px;
+    color          : var(--clr-blue);
+    font-weight    : 700;
+}
+
+.article-readmore:hover {
+    /* .article-readmore:focus { */
+    color          : var(--clr-dark-blue);
+    text-decoration: underline;
+}
+
+.emphasized {
+    color          : var(--clr-blue);
+    text-decoration: underline;
+}
+
+.emphasized:hover,
+.emphasized:focus {
+    color          : var(--clr-dark-blue);
 }
 
 /* ============
    Layout 
 =============*/
 
+header {
+    background-color: var(--clr-white);
+    padding         : 2em 0;
+}
+
 .container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  /*   border: 1px solid pink; */
+    width      : 90%;
+    max-width  : 900px;
+    margin     : 0 auto;
+    /*   border: 1px solid pink; */
+}
+
+main{
+    width: 75%;
+}
+
+aside{
+    width: 20%;
 }
 
 /*============= 
   Navigation
 =============*/
+nav{
+    margin: auto 0;
+}
+.container-flex {
+    display        : flex;
+    justify-content: space-between;
+}
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 @media (max-width: 775px) {
-  .nav-container {
-    flex-direction: column;
-  }
+    .container-flex {
+        flex-direction: column;
+    }
 }
+
 
 .nav-list {
-  padding: 0;
-  display: flex;
-  list-style: none;
-  justify-content: center;
+    padding        : 0;
+    display        : flex;
+    list-style     : none;
+    justify-content: center;
 }
+
 @media (max-width: 775px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-  }
+    .nav-list {
+        flex-direction: column;
+        align-items   : center;
+    }
+    header{
+        text-align: center;
+    }
 }
 
 .nav-item {
-  margin-left: 1em;
+    margin-left: 1em;
 }
+
 @media (max-width: 775px) {
-  .nav-item {
-    margin-top: 1.75em;
-  }
+    .nav-item {
+        margin-top: 1.75em;
+    }
 }
 
 .nav-link {
-  padding: 0.25em 0;
-  cursor: pointer;
-  letter-spacing: 3px;
-  text-decoration: none;
-  color: #707070;
-  font-weight: 700;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #1792d2;
+    padding        : 0.25em 0;
+    cursor         : pointer;
+    letter-spacing : 3px;
+    text-decoration: none;
+    color          : var(--clr-gray);
+    font-weight    : 700;
 }
 
-.current-page > .nav-link {
-  border-bottom: 1px solid;
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--clr-blue);
 }
-.current-page > .nav-link:hover {
-  color: #707070;
+
+.current-page>.nav-link {
+    border-bottom: 1px solid;
+}
+
+.current-page>.nav-link:hover {
+    color: var(--clr-gray);
 }
 
 /* =======================

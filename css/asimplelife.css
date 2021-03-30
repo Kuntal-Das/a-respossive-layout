@@ -261,6 +261,11 @@ articles
     border-bottom : 1px solid var(--clr-dark-gray);
 }
 
+.article-featured-image{
+    width: 100%;
+    object-fit: cover;
+}
+
 .article-image {
     max-height: 150px;
     width     : 100%;
@@ -307,7 +312,7 @@ sidebar
 }
 
 /* =======================
-sidebar
+    sidebar
 ======================= */
 footer {
     padding         : 2em;
@@ -330,4 +335,26 @@ footer {
 .post:last-child {
     border: none;
     margin-bottom: 0;
+}
+
+
+/* =======================
+    abtme page
+======================= */
+
+.abtme-image {
+    order: -1;
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+}
+
+.abtme-text {
+    margin-bottom: 1.5em;
+}
+
+.abtme-subheading {
+    font-size: 1.3rem;
+    color: var(--clr-blue);
 }

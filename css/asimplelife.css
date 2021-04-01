@@ -101,7 +101,7 @@ strong {
 .article-readmore {
     text-decoration: none;
     text-transform : uppercase;
-    letter-spacing : 2px;
+    letter-spacing : 1px;
     color          : var(--clr-blue);
     font-weight    : 700;
 }
@@ -131,9 +131,11 @@ strong {
     sidebar-typography 
 ========================*/
 .widget-title {
-    font-size  : 1.25rem;
+    font-size  : 1.1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -224,8 +226,9 @@ nav {
 .nav-link {
     padding        : 0.25em 0;
     cursor         : pointer;
-    letter-spacing : 3px;
+    letter-spacing : 1px;
     text-decoration: none;
+    text-transform: capitalize;
     color          : var(--clr-gray);
     font-weight    : 700;
 }
